@@ -10,7 +10,10 @@ To use the getJobs function, pass a location argument to filter the job results 
 ```js
 const getJobs = require('finn-jobb')
 
-getJobs("OSLO")
+getJobs().then((jobs) => {
+    const filteredJobs = jobs.filter((job) => job.lokasjon.includes('OSLO'));
+    console.log(filteredJobs);
+  });
 
 // ...
 ```

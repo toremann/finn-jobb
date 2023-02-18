@@ -1,4 +1,4 @@
-async function getJobs(location) {
+async function getJobs() {
   let page = 1;
   let hasMoreData = true;
   const jobs = [];
@@ -32,11 +32,7 @@ async function getJobs(location) {
     }
   }
 
-  return jobs.filter((job) => job.lokasjon.includes(location.toUpperCase()));
+  return jobs;
 }
 
-getJobs()
-  .then((jobs) => console.log(jobs))
-  .catch((error) => console.error(error));
-
-module.exports = getJobs
+module.exports = getJobs;
