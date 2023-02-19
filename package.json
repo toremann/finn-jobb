@@ -1,7 +1,7 @@
 {
   "name": "finn-jobb",
   "description": "Fetches job data from finn.no and stores it in an array until all data has been retrieved, then returns the resulting array of job objects.",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,6 @@
     "type": "git",
     "url": "https://github.com/toremann/finn-jobb.git"
   },
-  "author": "",
+  "author": "Toremann",
   "license": "ISC"
 }
