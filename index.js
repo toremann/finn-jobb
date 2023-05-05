@@ -1,4 +1,4 @@
-async function getJobs() {
+async function getFinnJobs() {
   let page = 1;
   let hasMoreData = true;
   const jobs = [];
@@ -35,4 +35,43 @@ async function getJobs() {
   return jobs;
 }
 
-module.exports = getJobs;
+async function getKode24Jobs() {
+  const jobs = [];
+  const url = `https://functions.kode24.no/api/listing/job/sorted`;
+
+  const response = await fetch(url, {
+    headers: {
+      accept: "*/*",
+    },
+  });
+
+  const data = await response.json();
+
+  data.ads.forEach((el) =>
+    jobs.push({
+      dato: new Date(el.published).toLocaleDateString("en-GB"),
+      lokasjon: el.locations[0].toUpperCase(),
+      // kode24.no/el.id for link
+      tekst: el.title,
+      id: `https://www.kode24.no/${el.id}`,
+    })
+  );
+
+  return jobs;
+}
+
+async function getJobs(options) {
+  if (options.getFinnJobs) {
+    const finnJobs = await getFinnJobs();
+    return finnJobs;
+  }
+
+  if (options.getKode24Jobs) {
+    const kode24Jobs = await getKode24Jobs();
+    return kode24Jobs;
+  }
+
+  console.log("Invalid options!");
+}
+
+module.exports = { getJobs };
