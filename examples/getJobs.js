@@ -1,4 +1,4 @@
-const { getJobs } = require("../index");
+const { getJobs } = require("../dist/src/index");
 
 async function myAwesomeFunc() {
     const jobs = await getJobs({
