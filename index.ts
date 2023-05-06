@@ -1,4 +1,4 @@
-import { Job, JobOptions, Contact, CompanyDetails, Data } from "../interfaces"
+import { Job, JobOptions, CompanyDetails, Data } from "./interfaces"
 
 async function getFinnJobs(): Promise<Job[]> {
   let page = 1;

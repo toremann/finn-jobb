@@ -2,9 +2,9 @@
   "name": "finn-jobb",
   "description": "Fetches job data from finn.no and stores it in an array until all data has been retrieved, then returns the resulting array of job objects.",
   "version": "1.0.8",
-  "main": "index.js",
+  "main": "./lib/src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
