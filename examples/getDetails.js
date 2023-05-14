@@ -1,6 +1,4 @@
-const { getJobs, getDetails } = require("../lib/index");
-// const { getJobs, getDetails } = require("finn-jobb");
-
+const { getJobs, getDetails } = require("finn-jobb");
 
 async function myAwesomeFunc() {
     

@@ -1,9 +1,8 @@
 const { getJobs } = require("../lib/index");
-// const { getJobs } = require("finn-jobb");
 
 async function myAwesomeFunc() {
     const jobs = await getJobs({
-      getFinnJobs: false,
+      getFinnJobs: true,
       getKode24Jobs: true,
     });
   

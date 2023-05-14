@@ -21,7 +21,7 @@ async function getFinnJobs(): Promise<Job[]> {
       console.log(`Page ${page} has data`);
       data.docs.forEach((el: any) =>
         jobs.push({
-          company: 'test',
+          company: el.company_name,
           dato: new Date(el.timestamp).toLocaleDateString("en-GB"),
           lokasjon: el.location.toUpperCase(),
           tekst: el.heading,

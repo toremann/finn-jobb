@@ -15,8 +15,9 @@ getJobs({
     });
 ```
 
-## Example
+## Examples
 ```js
+// Fetching jobs
 const { getJobs } = require("finn-jobb");
 
 async function myAwesomeFunc() {
@@ -33,6 +34,25 @@ async function myAwesomeFunc() {
 // ...
 ```
 
+```js
+// Get the details about a company
+const { getDetails } = require("finn-jobb");
+
+async function myAwesomeFunc() {
+    
+    const company = "My awesome company AS"
+  
+    // getDetails takes a string as an argument
+    const details = await getDetails(company);
+
+    // returns the details of company
+    console.log(details);
+  }
+  
+  myAwesomeFunc();
+
+  // ...
+  ```
 ## Discord
 
 GitHub user [MartheHilde](https://github.com/MartheHilde) has created a discord bot using finn-jobb, check it out here: [finn-jobb-discordbot](https://github.com/MartheHilde/Finn-jobb-discordbot) :beers:
