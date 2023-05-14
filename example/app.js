@@ -1,4 +1,4 @@
-const { getJobs } = require("../index");
+const { getJobs } = require("finn-jobb");
 
 async function myAwesomeFunc() {
     const jobs = await getJobs({
