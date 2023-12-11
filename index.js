@@ -22,7 +22,7 @@ async function getFinnJobs() {
           dato: new Date(el.timestamp).toLocaleDateString("en-GB"),
           lokasjon: el.location.toUpperCase(),
           tekst: el.heading,
-          link: el.ad_link,
+          link: el.canonical_url,
         })
       );
       page++;
